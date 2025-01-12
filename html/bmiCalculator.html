@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/bmiCalculator.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script src="../assets/js/bmiCalculator.js" defer=" "></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="button-backToHome"><a href="./home.html">Back to Home</a></div>
+  <section class="container">
+    <h1>BMI Table</h1>
+    <div class="info-container">
+      <div class=container-bmi-info">
+        <h2 class="title">BMI</h2>
+        
+          <div class="info-geral">
+            <div class="info">Less than 18,5</div>
+            <div class="info">between 18,5 and 24,9</div>
+            <div class="info">between 25 and 29,9</div>
+            <div class="info">between 30 and 34,9</div>  
+            <div class="info">between 35 and 39,9</div>
+            <div class="info">More than 40</div>   
+          </div>
+          
+      </div>
+      <div class=" container-result-info">
+        <h2 class="title">Result</h2>
+
+        <div class="info-geral">
+          <div class="info">Underweight</div>
+          <div class="info">Normal weight</div>
+          <div class="info">Overweight</div>
+          <div class="info">Obesity grade 1</div>
+          <div class="info">Obesity grade 2</div>  
+          <div class="info">Obesity grade 3</div>   
+        </div>
+        
+      </div>
+    </div>
+
+    <form class="form" action="">
+      <label for="">Height / cm</label>
+      <input class="heightidentfier" type="text" id="height" />
+
+      <label for="">Weight / Kg</label>
+      <input class="weightidentfier" type="text" id="weight" />
+      <button>Result</button>
+    </form>
+      <div class="result-div" id="result">
+      </div>
+  </section>
+  
+</body>
+</html>

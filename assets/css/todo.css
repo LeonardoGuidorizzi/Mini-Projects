@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+.title-container {
+  display: flex;
+  justify-content: center;
+}
+.title-content {
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tarefa-container {
+  margin-left: 20px;
+}
+.btn-tarefa {
+  height: 2rem;
+  width: 10rem;
+  border-radius: 100px;
+  border-color: yellow;
+  font-family: "IBM Plex Mono", serif;
+  font-style: normal;
+}
+.input-tarefa {
+  height: 2rem;
+  border-radius: 100px;
+}
+.li-style {
+  font-family: "IBM Plex Mono", serif;
+  font-style: normal;
+  margin-bottom: 10px;
+  list-style: none;
+}
+.apagar {
+  height: 1.5rem;
+  width: 5rem;
+  border-radius: 10px;
+  font-family: "IBM Plex Mono", serif;
+  font-style: normal;
+  border-color: red;
+}
+.tarefas {
+  margin-top: 1rem;
+}
+.checkbutton-style {
+  height: 100px;
+  background-color: black;
+}
+
+.tarefa {
+  display: flex;
+  width: 14rem;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+h1 {
+  font-family: "IBM Plex Mono", serif;
+  font-style: normal;
+}
+input {
+  padding-left: 10px;
+  font-family: "IBM Plex Mono", serif;
+  border-color: #1e90ff;
+}
+form input,
+form label,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
