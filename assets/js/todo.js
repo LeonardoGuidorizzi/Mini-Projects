@@ -1,6 +1,7 @@
 const inputTarefa = document.querySelector(".input-tarefa");
 const bntTarefa = document.querySelector(".btn-tarefa");
 const tarefas = document.querySelector(".tarefas");
+
 const banco = [
   { tarefa: "Estudar", status: "" },
   { tarefa: "Sarrafar", status: "" },
@@ -8,9 +9,9 @@ const banco = [
 
 const criadorDeTarefa = (indice, textoInput, status) => {
   const newTarefa = `<li class="tarefa">
-          <input type="checkbox"${status} data-indice=${indice} />
+          <input type="checkbox"${status} data-indice="${indice}" />
           <p>${textoInput}</p>
-          <button class="apagar">apagar</button data-indice=${indice}>
+          <button class="apagar"data-indice="${indice}">apagar</button>
         </li>`;
   tarefas.innerHTML += newTarefa;
 };
@@ -29,22 +30,36 @@ const atulizarTela = () => {
 };
 function inserirTarefa(valueInput) {
   banco.push({ tarefa: valueInput, status: "" });
+  atulizarTela();
   inputTarefa.value = "";
+}
+function removerTarefa(indice) {
+  banco.splice(indice, 1);
   atulizarTela();
 }
+const clickItem = (e) => {
+  const el = e.target;
+
+  if (el.classList.contains(".apagar")) {
+    const indice = el.dataset.indice;
+    console.log(indice);
+
+    removerTarefa(indice);
+  }
+};
+tarefas.addEventListener("click", clickItem);
 bntTarefa.addEventListener("click", function () {
   const valueInput = inputTarefa.value.trim();
-  if (!inputTarefa.value) return;
+
   inserirTarefa(valueInput);
 });
-inputTarefa.addEventListener("keypress", function (e) {
-  if (e.keyCode == 13) {
-    if (!inputTarefa.value) return;
-    const valueInput = inputTarefa.value.trim;
+inputTarefa.addEventListener("keyup", function (e) {
+  if (e.key === "Enter") {
+    const valueInput = inputTarefa.value.trim();
     inserirTarefa(valueInput);
   }
 });
-
+console.log(banco);
 atulizarTela();
 // banco.forEach((item, indice) => {
 //   criadorDeTarefa(item.indice, item.tarefa, indice);
