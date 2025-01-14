@@ -65,7 +65,7 @@
 
 .tarefa {
   display: flex;
-  width: 14rem;
+  width: 100%;
   justify-content: space-between;
   margin-bottom: 7px;
 }
