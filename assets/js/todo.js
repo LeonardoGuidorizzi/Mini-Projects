@@ -18,6 +18,14 @@ const criadorDeTarefa = (indice, textoInput, status) => {
         </li>`;
   tarefas.innerHTML += newTarefa;
 };
+
+function inserirTarefa(valueInput) {
+  const banco = getBanco();
+  banco.push({ tarefa: valueInput, status: "" });
+  setBanco(banco);
+  atulizarTela();
+  inputTarefa.value = "";
+}
 const limparTarefas = () => {
   const tarefas = document.querySelector(".tarefas");
   while (tarefas.firstChild) {
@@ -32,13 +40,7 @@ const atulizarTela = () => {
     criadorDeTarefa(indice, item.tarefa, item.status)
   );
 };
-function inserirTarefa(valueInput) {
-  const banco = getBanco();
-  banco.push({ tarefa: valueInput, status: "" });
-  setBanco(banco);
-  atulizarTela();
-  inputTarefa.value = "";
-}
+
 function removerTarefa(indice) {
   const banco = getBanco();
   banco.splice(indice, 1);
@@ -65,12 +67,14 @@ const clickItem = (e) => {
     atualizarItem(indice);
   }
 };
+
 tarefas.addEventListener("click", clickItem);
 
 bntTarefa.addEventListener("click", function () {
   const valueInput = inputTarefa.value.trim();
   inserirTarefa(valueInput);
 });
+
 inputTarefa.addEventListener("keyup", function (e) {
   if (e.key === "Enter") {
     const valueInput = inputTarefa.value.trim();
