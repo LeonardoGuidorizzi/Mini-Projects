@@ -36,7 +36,7 @@
   border-radius: 8px;
   border-color: yellow;
   font-family: "IBM Plex Mono", serif;
-  font-style: normal;
+  font-weight: bold;
 }
 .input-tarefa {
   height: 2rem;
@@ -44,7 +44,7 @@
 }
 .li-style {
   font-family: "IBM Plex Mono", serif;
-  font-style: normal;
+  font-weight: bold;
   margin-bottom: 10px;
   list-style: none;
 }
@@ -55,7 +55,7 @@ button.apagar {
   font-family: "IBM Plex Mono", serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.2s ease;
-
+  font-weight: bold;
   border-color: red;
 }
 .tarefas {
