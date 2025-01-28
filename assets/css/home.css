@@ -21,4 +21,18 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 1rem;
+}
+.icon {
+  height: 6rem;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.icon:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
 }
