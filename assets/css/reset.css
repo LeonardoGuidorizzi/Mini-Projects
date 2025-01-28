@@ -11,3 +11,12 @@ body {
   background: var(--primary-color);
   font-family: "Open sans", sans-serif;
 }
+.button-backToHome {
+  height: 3rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+}

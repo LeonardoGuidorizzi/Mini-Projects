@@ -10,7 +10,7 @@ function TodoList() {
                   <div class= task-input-container>
                         <p>${inputValue}</p>
                   </div>
-               <button class="apagar" data-index="${index}">apagar</button>
+               <button class="apagar" data-index="${index}">Erase</button>
             </li>`;
     this.task.innerHTML += newTask;
   };

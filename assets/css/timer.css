@@ -55,7 +55,8 @@ form input {
 form input:focus {
   outline: 1px solid var(--primary-color);
 }
-
+.pausar {
+}
 form button {
   border: none;
   background: var(--primary-color);
