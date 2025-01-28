@@ -16,6 +16,7 @@
 }
 .input-container {
   display: flex;
+  gap: 0.5rem;
   justify-content: center;
 }
 .container {
@@ -32,14 +33,14 @@
 .btn-tarefa {
   height: 2rem;
   width: 10rem;
-  border-radius: 100px;
+  border-radius: 8px;
   border-color: yellow;
   font-family: "IBM Plex Mono", serif;
   font-style: normal;
 }
 .input-tarefa {
   height: 2rem;
-  border-radius: 100px;
+  border-radius: 8px;
 }
 .li-style {
   font-family: "IBM Plex Mono", serif;
@@ -47,12 +48,14 @@
   margin-bottom: 10px;
   list-style: none;
 }
-.apagar {
-  height: 1.5rem;
-  width: 5rem;
-  border-radius: 10px;
+button.apagar {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
   font-family: "IBM Plex Mono", serif;
-  font-style: normal;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
   border-color: red;
 }
 .tarefas {
@@ -65,13 +68,26 @@
 
 .tarefa {
   display: flex;
-  width: 100%;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 7px;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-.tarefa input[type="checkbox"]:checked + p {
+.tarefa input[type="checkbox"]:checked + .task-input-container p {
   text-decoration: line-through;
   color: gray;
+}
+.task-input-container {
+  flex-grow: 1;
+}
+.task-input-container p {
+  margin: 0;
+  word-break: break-word;
 }
 h1 {
   font-family: "IBM Plex Mono", serif;
@@ -113,4 +129,16 @@ form button {
 
 form button:hover {
   background: var(--primary-color-darker);
+}
+@media (max-width: 768px) {
+  .input-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .task-input-container {
+    flex-grow: 1;
+    width: 100%;
+  }
 }

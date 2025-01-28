@@ -7,7 +7,9 @@ function TodoList() {
   this.taskCreator = (index, inputValue, status) => {
     const newTask = `<li class="tarefa">
                <input type="checkbox"${status} data-index="${index}" />
-               <p>${inputValue}</p>
+                  <div class= task-input-container>
+                        <p>${inputValue}</p>
+                  </div>
                <button class="apagar" data-index="${index}">apagar</button>
             </li>`;
     this.task.innerHTML += newTask;
