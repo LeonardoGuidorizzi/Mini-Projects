@@ -36,3 +36,8 @@ main {
   background-color: #ddd;
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  .home-presentation {
+    font-size: 20px;
+  }
+}
